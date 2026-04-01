@@ -7,6 +7,11 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   children: React.ReactNode;
 }
 
+/**
+ * Button component that supports primary, secondary, and danger variants, 
+ * including dynamic class application based on button state.
+ * It also handles a disabled state with appropriate styling and behavior.
+ */
 export function Button({ variant = 'primary', className = '', children, ...props }: ButtonProps) {
   const baseStyles = 'px-4 py-2 rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   
